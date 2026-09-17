@@ -77,7 +77,7 @@ public class IntroOrchestrator : MonoBehaviour
         VOManager.Instance.ShowSubtitle(new List<VOManager.SubtitleLine>
         {
             new VOManager.SubtitleLine("Alright, let's do a final check real quick.", 1000f, 2500f),
-            new VOManager.SubtitleLine("Is that lever set up?", 3000f, 5000f),
+            new VOManager.SubtitleLine("See that lever set up?", 3000f, 5000f),
         });
 
         Debug.Log("PlayIntroSequence started");
@@ -90,17 +90,22 @@ public class IntroOrchestrator : MonoBehaviour
         });
         yield return new WaitUntil(() => lever.leverFlipped == true);
         Debug.Log("lever flipped, continuing");
+        VOManager.Instance.ShowPrompt(new List<VOManager.SubtitleLine>
+        {
+            new VOManager.SubtitleLine("", 0, 1000),
+        });
+        // VOManager.Instance.ShowSubtitle(null);
 
 
         VOManager.Instance.PlayLine(introClipPart2);
             VOManager.Instance.ShowSubtitle(new List<VOManager.SubtitleLine>
         {
             new VOManager.SubtitleLine("Sweettt", 0f, 1500f),
-            new VOManager.SubtitleLine("Don’t forget buddy, you can only flip it once per round yeah?", 1500f, 5000f),
+            new VOManager.SubtitleLine("Don’t forget buddy, you can only flip it once per round yeah?", 1500f, 7000f),
             new VOManager.SubtitleLine("Alright, we're gonna be on air in", 5000, 6500f),
-            new VOManager.SubtitleLine("3", 6500f, 7000f),
-            new VOManager.SubtitleLine("2", 7000f, 7500f),
-            new VOManager.SubtitleLine("1", 7500f, 8000f),
+            new VOManager.SubtitleLine("3", 6500f, 8000f),
+            new VOManager.SubtitleLine("2", 8000f, 8500f),
+            new VOManager.SubtitleLine("1", 8500f, 9000f),
         });
         // 0:09 drum rolls spinning lights on
         yield return new WaitForSeconds(9);

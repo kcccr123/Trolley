@@ -47208,31 +47208,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6100389820538841654, guid: c0e56157e5ffae74dbaf952fe91860cc, type: 3}
       propertyPath: airMultiplier
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6100389820538841654, guid: c0e56157e5ffae74dbaf952fe91860cc, type: 3}
-      propertyPath: oppositeAirMultiplier
-      value: 1
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6100389820538841654, guid: c0e56157e5ffae74dbaf952fe91860cc, type: 3}
       propertyPath: sideAirMultiplier
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100389820538841654, guid: c0e56157e5ffae74dbaf952fe91860cc, type: 3}
+      propertyPath: useClusterTruckJump
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6100389820538841654, guid: c0e56157e5ffae74dbaf952fe91860cc, type: 3}
-      propertyPath: useWorldDirectionalAirDrag
+      propertyPath: maxCorrectionMultiplier
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100389820538841654, guid: c0e56157e5ffae74dbaf952fe91860cc, type: 3}
+      propertyPath: horziontalJumpMultiplier
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6100389820538841654, guid: c0e56157e5ffae74dbaf952fe91860cc, type: 3}
-      propertyPath: trolleyWorldDirection.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6100389820538841654, guid: c0e56157e5ffae74dbaf952fe91860cc, type: 3}
-      propertyPath: trolleyWorldDirection.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6100389820538841654, guid: c0e56157e5ffae74dbaf952fe91860cc, type: 3}
-      propertyPath: trolleyWorldDirection.z
-      value: 1
+      propertyPath: sidewaysHorizontalJumpMultiplier
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 7735057603086622755, guid: c0e56157e5ffae74dbaf952fe91860cc, type: 3}
       propertyPath: m_Name
@@ -74035,6 +74031,7 @@ MonoBehaviour:
   fail1: {fileID: 8300000, guid: 88173ecb451374cbfad3f0cd4f3719b0, type: 3}
   fail2: {fileID: 8300000, guid: 8c8c8bfcdd402432788b2fc4423fa2c6, type: 3}
   fail3: {fileID: 8300000, guid: 095437742121244fba1c2de87e1e0827, type: 3}
+  finalDeath: {fileID: 8300000, guid: 28f51ba0c3b4d8348ac9908e9f45c086, type: 3}
   catMeow: {fileID: 8300000, guid: 019191aabefaf4fb891c25ee1dffb41a, type: 3}
   themeSong: {fileID: 8300000, guid: 84ea2376d2bf96a4482f32710cde33db, type: 3}
   jumpSound: {fileID: 8300000, guid: 9ebd020862f739c40b094bc1bf702833, type: 3}
@@ -130482,8 +130479,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1263031340}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.058624126, y: 0.039483048, z: -0.0050465716, w: 0.9974863}
-  m_LocalPosition: {x: 309.2893, y: 22.196728, z: -349.7153}
+  m_LocalRotation: {x: 0.107752606, y: 0.23044306, z: -0.025685541, w: 0.9667604}
+  m_LocalPosition: {x: 323.12564, y: 6.998463, z: -28.39126}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -169744,7 +169741,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 40}
+  m_AnchoredPosition: {x: 0, y: 100}
   m_SizeDelta: {x: -160, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1637420568

@@ -14,7 +14,7 @@ public class Health : MonoBehaviour
     public NextScene nextSceneLoader;
     public float fadeDuration = 0.25f;
     public bool isDeathCoroutinePlaying;
-    static int deathCount = 0;
+    public static int deathCount = 0;
 
     // yo macro below tells the function to run any time a new session is started or sm shi
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
@@ -26,18 +26,20 @@ public class Health : MonoBehaviour
     void Start()
     {
         isDeathCoroutinePlaying = false;
-        uiImage.enabled = true;
-        Color c = uiImage.color;
-        c.a = 1f;
-        uiImage.color = c;
-
-        if (!skipFade)
-            TriggerFadeFromBlack();
-        else
-        {
-            c.a = 0f;
+        if(uiImage) {
+            uiImage.enabled = true;
+            Color c = uiImage.color;
+            c.a = 1f;
             uiImage.color = c;
-            
+
+            if (!skipFade)
+                TriggerFadeFromBlack();
+            else
+            {
+                c.a = 0f;
+                uiImage.color = c;
+                
+            }
         }
     }
 
@@ -62,7 +64,7 @@ public class Health : MonoBehaviour
         yield return StartCoroutine(FadeToBlack());
         Debug.Log("death count");
         Debug.Log(deathCount);
-        if(deathCount > 3)
+        if(deathCount >= 3 || SceneManager.GetActiveScene().name == "TrackEnding")
         {
             Debug.Log("died too many times, loading next scene");
             nextSceneLoader.TriggerSceneChange();

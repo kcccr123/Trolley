@@ -336,7 +336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3887237010870440128, guid: d1fa5b990bc5b4f44a1da46563c05234, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -965.64
+      value: -964.54
       objectReference: {fileID: 0}
     - target: {fileID: 3887237010870440128, guid: d1fa5b990bc5b4f44a1da46563c05234, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -665,6 +665,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2972068866885676290, guid: c0e56157e5ffae74dbaf952fe91860cc, type: 3}
+      propertyPath: m_Antialiasing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2972068866885676290, guid: c0e56157e5ffae74dbaf952fe91860cc, type: 3}
       propertyPath: m_RenderPostProcessing
       value: 1
@@ -3177,7 +3181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f9d564b2ee1e547c2b8967c3b10e3411, type: 3}
       propertyPath: m_Name
-      value: Curtains
+      value: Curtains L
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f9d564b2ee1e547c2b8967c3b10e3411, type: 3}
       propertyPath: m_IsActive
@@ -3352,7 +3356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f9d564b2ee1e547c2b8967c3b10e3411, type: 3}
       propertyPath: m_Name
-      value: Curtains (1)
+      value: Curtains R
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f9d564b2ee1e547c2b8967c3b10e3411, type: 3}
       propertyPath: m_IsActive
@@ -4292,7 +4296,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1282610237}
-  - component: {fileID: 1282610236}
+  - component: {fileID: 1282610238}
   m_Layer: 0
   m_Name: 3DoorOrchestrator
   m_TagString: Untagged
@@ -4300,33 +4304,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1282610236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1282610235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3173f417c35cb42049d09e6410227532, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  doorACurtain: {fileID: 1939345326}
-  doorBCurtain: {fileID: 402785285}
-  curtainOpenDistance: 10
-  curtainOpenDuration: 1
-  glassPanel: {fileID: 1448855250}
-  segway: {fileID: 8300000, guid: ee8ffed8862e741eeaca9dcdcf1ae745, type: 3}
-  tracksIntro: {fileID: 8300000, guid: 6a64e7dd71fc241f8872945485f17abf, type: 3}
-  coasterIntro: {fileID: 8300000, guid: 539064381e59941d0a3152dfbf4a0cbf, type: 3}
-  ending: {fileID: 8300000, guid: 0102d6b6ccfaf4db2bf6d38a5c219646, type: 3}
-  leftL: {fileID: 1576386460}
-  rightL: {fileID: 1359782080}
-  leftDoorKey: {fileID: 1053663605}
-  rightDoorKey: {fileID: 1536273240}
-  lightOn: {fileID: 8300000, guid: d788c5525137f42098ab88dde65f8426, type: 3}
-  canEnter: 0
 --- !u!4 &1282610237
 Transform:
   m_ObjectHideFlags: 0
@@ -4342,6 +4319,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1282610238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282610235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bf84f9b31b362e4fa4194c8c7e85e6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EndingDoorOrchestrator
+  doorACurtain: {fileID: 1939345326}
+  doorBCurtain: {fileID: 402785285}
+  curtainOpenDistance: 10
+  curtainOpenDuration: 1
+  glassPanel: {fileID: 1448855250}
+  segway: {fileID: 8300000, guid: ee8ffed8862e741eeaca9dcdcf1ae745, type: 3}
+  tracksIntro: {fileID: 8300000, guid: 6a64e7dd71fc241f8872945485f17abf, type: 3}
+  coasterIntro: {fileID: 8300000, guid: 539064381e59941d0a3152dfbf4a0cbf, type: 3}
+  ending: {fileID: 8300000, guid: 0102d6b6ccfaf4db2bf6d38a5c219646, type: 3}
+  leftL: {fileID: 1576386460}
+  rightL: {fileID: 1359782080}
+  leftDoorKey: {fileID: 1053663605}
+  rightDoorKey: {fileID: 1536273240}
+  lightOn: {fileID: 8300000, guid: d788c5525137f42098ab88dde65f8426, type: 3}
+  canEnter: 0
 --- !u!1 &1287837909
 GameObject:
   m_ObjectHideFlags: 0
@@ -4392,7 +4396,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1287837909}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50792f0bdb918d14a9c9ac3f65c8942c, type: 3}
   m_Name: 
@@ -4504,8 +4508,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcec620d1ad48419e9ef8659ac976188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EndingDoor
-  sceneToLoad: CoasterEnding
-  ePrompt: {fileID: 632761117}
 --- !u!1 &1289796622
 GameObject:
   m_ObjectHideFlags: 0
@@ -4755,6 +4757,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1304071943}
   m_CullTransparentMesh: 1
+--- !u!1 &1326852324
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1326852325}
+  - component: {fileID: 1326852327}
+  - component: {fileID: 1326852326}
+  m_Layer: 0
+  m_Name: Cube (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1326852325
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326852324}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: 0.0121, y: 0.00070773, z: 0.0576}
+  m_LocalScale: {x: 0.43713275, y: 0.0743499, z: 0.03964921}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1448855250}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1326852326
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326852324}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1326852327
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326852324}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1357337176
 GameObject:
   m_ObjectHideFlags: 0
@@ -4889,7 +4953,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 40}
+  m_AnchoredPosition: {x: 0, y: 100}
   m_SizeDelta: {x: -160, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1357408488
@@ -5460,7 +5524,8 @@ Transform:
   m_LocalPosition: {x: 0.43, y: 0.55, z: 6.73}
   m_LocalScale: {x: 54.307076, y: 29.106964, z: 44.793037}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1326852325}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1456022741
@@ -6377,7 +6442,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1731263084}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50792f0bdb918d14a9c9ac3f65c8942c, type: 3}
   m_Name: 
@@ -6489,8 +6554,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcec620d1ad48419e9ef8659ac976188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  sceneToLoad: TrackEnding
-  ePrompt: {fileID: 345180491}
 --- !u!1 &1748021910
 GameObject:
   m_ObjectHideFlags: 0
